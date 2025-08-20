@@ -1,0 +1,104 @@
+Aula 19/08
+
+--INICIAR FLUTTER
+VsCode - CTRL + SHIFT + P = new project
+No lib - main.dart
+CTRL + SHIFT + P = Select device = (pixel 9) mobile device
+No terminal - flutter run
+
+--- Na linha 86 trocar a cor
+no terminal - digitar r (para atualizar)
+
+--Para inspecionar a árvore dos widgets
+clicar F5 = abrir no flutter debug
+Na imagem do flutter - flutter inspection
+
+--Dartpad
+dartpad.dev
+Samples
+Counter
+Run
+
+Create dart snippet
+
+main(){
+  
+  print("Olá mundo!");
+  
+  //fortemente tipada
+  
+  int a = 7;
+  //proibido a=3.1
+  double b=3.1;
+  
+  var c = "isso é uma string";
+  print("$c");
+    ///proibido c = 123;
+  //isso é uma inferência
+  print (c is String);
+  
+  bool estaEscuro = true;
+  bool estaQuente = false;
+  
+  print (estaEscuro || estaQuente); //OU logico
+  
+  print (estaEscuro && estaQuente); //AND logico
+  
+  print (!estaEscuro); //not logico
+  
+  //LISTAS EM DART - Aceita itens iguais/repetidos -> é INDEXADA (como se fosse um vetor, tem índice)
+  
+  var jogadores = ['Bruno', 'Alisson', 'Eden', 'Leonardo'];
+  jogadores.add('Pedro');
+  jogadores.add('Biel');
+  print(jogadores.length);
+  print(jogadores);
+  print(jogadores[2]);
+  print(jogadores.elementAt(2));
+  
+  for(int i=0; i<jogadores.length; i++){
+    print(jogadores[i]);
+  }
+  
+  //CONJUNTO - (SET)
+  var conjunto = {0,1,2,3,4,5,6,7,8,9};
+  print(conjunto.length);
+  print(conjunto is Set);
+  
+  //MAP - É uma estrutura de CHAVE(key) + VALOR(value)
+  
+  Map<String, int> camisetasJogadores = {
+    "Bruno,1": 1,
+    "Alisson": 2,
+    "Eden": 3,   
+    
+  };
+  
+  print("---------------------------------------------");
+  //CHAVES KEYS
+  for (var chave in camisetasJogadores.keys){
+    print ("Nome: $chave");
+  }
+  
+  //VALORES VALUES
+  for (var valor in camisetasJogadores.values){
+    print("Numero: $valor");
+  }
+  
+  //ENTRADAS - ENTRIES
+  for (var osdois in camisetasJogadores.entries){
+    print("Nome: ${osdois.key} e Numero: ${osdois.value}");
+  }
+
+//tipo DYNAMIC
+  dynamic x = "teste";
+  x = 777;
+  x= true;
+  print(x);
+  
+ 
+}
+
+
+
+
