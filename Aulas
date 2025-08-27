@@ -1,5 +1,6 @@
 Aula 19/08
 
+----->VSCode
 --INICIAR FLUTTER
 VsCode - CTRL + SHIFT + P = new project
 No lib - main.dart
@@ -13,7 +14,7 @@ no terminal - digitar r (para atualizar)
 clicar F5 = abrir no flutter debug
 Na imagem do flutter - flutter inspection
 
---Dartpad
+-----> Dartpad
 dartpad.dev
 Samples
 Counter
@@ -21,6 +22,7 @@ Run
 
 Create dart snippet
 
+......Código:
 main(){
   
   print("Olá mundo!");
@@ -98,6 +100,135 @@ main(){
   
  
 }
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Aula 26/08/2025 
+
+-----> Exercícios no Dartpad
+
+//Capítulo 1
+....Código:
+void main() {
+   
+  print('Marla Pacheco Bittencourt'); 
+  print('Vamos estudar DART');
+  
+  print(3+4);
+  print("3+4");
+  
+  print("assim");
+  print('ou assim');
+  
+  print("Meu nome é Marla");
+  print('Estou aprendendo Dart');
+  print('Hoje é um ótimo dia');
+
+ //Capítulo 2  
+  var nome = 'Jeep';
+  var ano = 2025;
+  var roda = 3.5;
+  
+  print(nome);
+  print(ano);
+  print(roda);
+   
+  int idade = 18;
+  print(idade);
+  
+//   idade = 4.5;
+//   print(idade);
+  
+  final ano_atual = DateTime.now().year;
+  print(ano_atual);
+  
+//   ano_atual = 2023;
+  
+  const taxa = 0.1;
+  double preco = 100;
+  print(preco - preco * taxa);
+  
+  final aluno = 'Pedro';
+  var nota = 7;
+  const pi = 3.14159;
+  
+  //Capítulo 3
+//Exercício 3
+  
+  var frutas = ['maçã', 'laranja', 'pera'];
+  for (var n in frutas) {
+    print('Eu gosto de $n!');
+  }
+  
+//Funções
+ main()
+{ 
+  soma(2,3);
+  print('O valor da soma é ${soma2(2,3)}');
+ }
+soma(a,b){ //entra como dynamic
+    print(a+b);
+}
+int soma2(a,b){
+  return (a+b);
+}
+void soma3(a,b){
+  print(a+b);
+}
+
+//Classes
+class Aluno{
+  String? nome;
+  double? nota;
+ //pode ser nulo, por isso com a ?
+  
+//construtor 
+Aluno();
+}
+
+class Aluno2{
+  String nome;
+  double nota;
+//não pode ser nulo, por isso sem a ?
+//Construtor com inicialização direta
+Aluno2(this.nome, this.nota);
+}
+
+class Aluno3{
+  String nome;
+  double nota;
+//construtor com inicialização direta NÃO POSICIONAL
+Aluno3({required this.nome, required this.nota}); //esse aqui tem chaves
+}
+
+main(){
+  //Exemplo de Uso Aluno
+  var a1 = new Aluno();
+  a1.nome = 'Rodrigo';
+  a1.nota = 10.0;
+  print('O aluno ${a1.nome} está com a nota ${a1.nota}');
+  
+  //Exemplo de Uso Aluno2
+  var a2 = Aluno2('José', 8.5);
+  print ('O aluno ${a2.nome} está com a nota ${a2.nota}');
+  
+  //Exemplo de Uso Aluno3
+  var a3 = Aluno3(nota:7.0,nome:'Luis'); //não posicional
+  print ('O aluno ${a3.nome} está com a nota ${a3.nota}');
+  
+}
+
+//Capítulo 4
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
 
 
 
