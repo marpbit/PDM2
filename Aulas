@@ -8,7 +8,7 @@ CTRL + SHIFT + P = Select device = (pixel 9) mobile device
 No terminal - flutter run
 
 --- Na linha 86 trocar a cor
-no terminal - digitar r (para atualizar)
+no terminal - digitar r (para atualizar) ou R (atualizar)
 
 --Para inspecionar a árvore dos widgets
 clicar F5 = abrir no flutter debug
@@ -216,8 +216,10 @@ main(){
   
 }
 
+---------------------------------------------------------------------------------------------------------------------------------
+Aula 02/09/2025
 //Capítulo 4
-
+Flutter Exemplo Simples
 
 
 
