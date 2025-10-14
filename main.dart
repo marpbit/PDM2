@@ -2,59 +2,82 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const ExemploBase());
 
+// ======================== APP PRINCIPAL ========================
 class ExemploBase extends StatelessWidget {
   const ExemploBase({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ExemploBasePage(),
+      title: 'App da Cozinha',
+      // Define todas as rotas do app
+      routes: {
+        '/': (context) => const TelaInicial(),
+        '/comidas': (context) => const ComidasPage(),
+        '/bebidas': (context) => const BebidasPage(),
+        '/pedido': (context) => const PedidoPage(),
+      },
     );
   }
 }
 
-// ========== 1) TELA INICIAL — ESCOLHA DE CATEGORIA ==========
-class ExemploBasePage extends StatelessWidget {
-  const ExemploBasePage({super.key});
+// ======================== 1) TELA INICIAL ========================
+class TelaInicial extends StatelessWidget {
+  const TelaInicial({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Cardápio')),
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text(''), // vazio
+        elevation: 0,
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: Column(
-            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment:
+                MainAxisAlignment.center, // centraliza verticalmente
             children: [
-              const Text('Escolha uma categoria'),
-              const SizedBox(height: 12),
+              const Text(
+                'Cardápio',
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 16),
+
+              const SizedBox(height: 24),
+
+              // Botão Comidas
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => const ComidasPage()),
+                  onPressed: () => Navigator.pushNamed(context, '/comidas'),
+                  child: const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 12),
+                    child: Text(' Comidas'),
                   ),
-                  child: const Text(' Comidas'),
                 ),
               ),
               const SizedBox(height: 8),
+
+              // Botão Bebidas
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => const BebidasPage()),
+                  onPressed: () => Navigator.pushNamed(context, '/bebidas'),
+                  child: const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 12),
+                    child: Text(' Bebidas'),
                   ),
-                  child: const Text(' Bebidas'),
                 ),
               ),
               const SizedBox(height: 8),
+
+              // Link para pedido
               TextButton(
-                onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => const PedidoPage()),
-                ),
+                onPressed: () => Navigator.pushNamed(context, '/pedido'),
                 child: const Text('Fazer um pedido'),
               ),
             ],
@@ -65,13 +88,14 @@ class ExemploBasePage extends StatelessWidget {
   }
 }
 
-// ========== 2) TELA DE BEBIDAS — LISTA SIMPLES ==========
+// ======================== 2) TELA DE BEBIDAS ========================
 class BebidasPage extends StatelessWidget {
   const BebidasPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     final itens = const [
-      ('Suco de Laranja', Icons.local_drink),
+      ('Suco de laranja', Icons.local_drink),
       ('Refrigerante', Icons.local_cafe),
       ('Água Mineral', Icons.water_drop),
       ('Chá Gelado', Icons.emoji_food_beverage),
@@ -95,9 +119,10 @@ class BebidasPage extends StatelessWidget {
   }
 }
 
-// ========== 3) TELA DE COMIDAS — CARDS BÁSICOS ==========
+// ======================== 3) TELA DE COMIDAS ========================
 class ComidasPage extends StatelessWidget {
   const ComidasPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     final itens = const [
@@ -117,46 +142,32 @@ class ComidasPage extends StatelessWidget {
         itemBuilder: (_, i) {
           final (titulo, descricao) = itens[i];
           return Container(
-            padding: const EdgeInsets.all(8), // Container (L1)
+            padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black12),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Row(
-              // Row (L1)
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  width: 64,
-                  height: 64,
-                  color: Colors.grey[300],
-                ), // “imagem” fake
-                const SizedBox(width: 8), // SizedBox (L1)
+                Container(width: 64, height: 64, color: Colors.grey[300]),
+                const SizedBox(width: 8),
                 Expanded(
-                  // Expanded (L2)
                   child: Column(
-                    // Column (L1)
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         titulo,
                         style: const TextStyle(fontWeight: FontWeight.w600),
                       ),
-                      const SizedBox(height: 4),
                       Text(descricao),
-                      const SizedBox(height: 6),
                       Row(
                         children: [
                           TextButton(
-                            onPressed: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (_) => const PedidoPage(),
-                              ),
-                            ),
+                            onPressed: () =>
+                                Navigator.pushNamed(context, '/pedido'),
                             child: const Text('Pedir'),
                           ),
-                          const Spacer(), // Spacer (L2)
+                          const Spacer(),
                           const Text('15-20 min'),
                         ],
                       ),
@@ -172,17 +183,17 @@ class ComidasPage extends StatelessWidget {
   }
 }
 
-// ========== 4) TELA DE PEDIDO — FORMULÁRIO  ==========
+// ======================== 4) TELA DE PEDIDO ========================
 class PedidoPage extends StatelessWidget {
   const PedidoPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Pedido')),
       body: Padding(
-        padding: const EdgeInsets.all(16), // Padding (L2)
+        padding: const EdgeInsets.all(16),
         child: Column(
-          // Column (L1)
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const TextField(
