@@ -1,0 +1,115 @@
+{
+  "mode": "categories",
+  "levels": [],
+  "categories": ["musicas", "tv", "brinquedos"],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Qual dessas bandas era conhecida pelo hit “Wannabe”, lançado em 1996?",
+      "level": null,
+      "category": "musicas",
+      "options": ["Backstreet Boys", "Hanson", "Spice Girls", "Oasis", "NSYNC"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "id": 2,
+      "text": "Qual era o apelido do dançarino mais famoso do grupo É o Tchan?",
+      "level": null,
+      "category": "musicas",
+      "options": ["Compadre Washington", "Beto Jamaica", "Papagaio", "Jacaré", "Netinho"],
+      "answerIndex": 3,
+      "explanation": ""
+    },
+    {
+      "id": 3,
+      "text": "Qual grupo brasileiro ficou famoso pelo sucesso “Cheia de Manias”, lançado nos anos 90?",
+      "level": null,
+      "category": "musicas",
+      "options": ["Exaltasamba", "Raça Negra", "Molejo", "Só Pra Contrariar", "Katinguelê"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "id": 4,
+      "text": "O hit “Ironic” ficou famoso na voz de qual cantora dos anos 90?",
+      "level": null,
+      "category": "musicas",
+      "options": ["Shania Twain", "Avril Lavigne", "Shakira", "Sarah McLachlan", "Alanis Morissette"],
+      "answerIndex": 4,
+      "explanation": ""
+    },
+    {
+      "id": 5,
+      "text": "Qual programa infantil da TV Globo dos anos 90 exibia uma turma de bonecos de cães falantes que trabalhavam em uma emissora fictícia?",
+      "level": null,
+      "category": "tv",
+      "options": ["TV Colosso", "Glub Glub", "Planeta Xuxa", "Castelo Rá-Tim-Bum", "Mundo da Lua"],
+      "answerIndex": 0,
+      "explanation": ""
+    },
+    {
+      "id": 6,
+      "text": "Qual desenho mostrava um garoto de colete verde apaixonado pela Patti Maionese?",
+      "level": null,
+      "category": "tv",
+      "options": ["Hey Arnold!", "Doug", "Inspetor Bugiganga", "Pinky e o Cérebro", "A Hora do Recreio"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "id": 7,
+      "text": "Qual programa dos anos 90, exibido pelo SBT, misturava música, dança e jogos por telefone com o público?",
+      "level": null,
+      "category": "tv",
+      "options": ["Sábado Animado", "Ratinho", "Domingo Legal", "Programa Fantasia", "Programa do Gugu"],
+      "answerIndex": 3,
+      "explanation": ""
+    },
+    {
+      "id": 8,
+      "text": "Qual programa educativo dos anos 90 mostrava um cientista de jaleco verde realizando experiências malucas com a ajuda de um rato e uma assistente?",
+      "level": null,
+      "category": "tv",
+      "options": ["Castelo Rá-Tim-Bum", "O Show da Luna", "Mundo da Lua", "O Mundo de Beakman", "Glub Glub"],
+      "answerIndex": 3,
+      "explanation": ""
+    },
+    {
+      "id": 9,
+      "text": "Qual brincadeira tradicional dos anos 90 era feita pulando com um pé só em quadrados desenhados no chão?",
+      "level": null,
+      "category": "brinquedos",
+      "options": ["Elástico", "Queimada", "Pular corda", "Taco", "Amarelinha"],
+      "answerIndex": 4,
+      "explanation": ""
+    },
+    {
+      "id": 10,
+      "text": "Qual jogo de corrida dos anos 90 colocava personagens da Nintendo para disputar pistas cheias de cascos e bananas?",
+      "level": null,
+      "category": "brinquedos",
+      "options": ["Crash Team Racing", "Sonic R", "Gran Turismo", "Mario Kart", "Top Gear"],
+      "answerIndex": 3,
+      "explanation": ""
+    },
+    {
+      "id": 11,
+      "text": "Quais eram os colecionáveis em forma de discos que vinham dentro dos pacotes de salgadinho nos anos 90?",
+      "level": null,
+      "category": "brinquedos",
+      "options": ["Cards", "Tazos", "Pogs", "Adesivos Smash", "Figurinhas Turbo"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "id": 12,
+      "text": "Qual brinquedo eletrônico dos anos 90 simulava o cuidado de um bichinho virtual?",
+      "level": null,
+      "category": "brinquedos",
+      "options": ["Digimon", "Tamagotchi", "Game Boy", "Furby", "Bichinho Virtual da Estrela"],
+      "answerIndex": 1,
+      "explanation": ""
+    }
+  ]
+}
